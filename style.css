@@ -21,6 +21,7 @@ form {
   justify-content: center;
   align-items: center;
 }
+
 form input,
 form button {
   background-color: blue;
@@ -37,8 +38,8 @@ form button {
   transition: all 0.3s ease;
 }
 
-form button:hover{
+form button:hover {
   background-color: red;
   color: white;
-
 }
+
