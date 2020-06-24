@@ -6,8 +6,7 @@
 //   window.location.reload(1);
 // }, 8000);
 
-//  c58 . js58
-//Make navbar trasnparent when it is on the top
+// generate new todo list whenever click '+' button
 
 // Selectors
 
@@ -28,24 +27,24 @@ function addTodo(event) {
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
 
-  //   Create LI
+  //   Create li
+  // Node.appendChild() 새로운 단락 요소를 생성하고 문서에 있는 바디 요소의 끝에 붙입니다.
   const newTodo = document.createElement("li");
-  newTodo.innerText = "hey";
+  newTodo.innerText = "li innerText";
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
   //   check mark button
-  // B:"<i class="fas fa-check"></i>" 로하면 따옴표때문에 에러 생김
+  // B:"<i class="fas fa-check"></i>" 로하면 같은 따옴표때문에 에러 생김
   const completedButton = document.createElement("button");
-  completedButton.innerText = '<i class="fas fa-check"></i>';
-
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
 
   //   check trash button
   const trashButton = document.createElement("button");
-  trashButton.innerText = '<i class="fas fa-trash"></i>';
-  trashButton.classList.add("complete-btn");
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
 
   //   Append to list
